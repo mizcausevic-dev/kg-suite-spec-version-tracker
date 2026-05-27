@@ -1,0 +1,60 @@
+{
+  "name": "kg-suite-spec-version-tracker",
+  "version": "0.1.0",
+  "description": "Walk a mixed-protocol directory of Kinetic Gain Suite JSON docs (AgentCards, MCP Tool Cards, prompt-provenance docs, evidence bundles, OTel GenAI OTLP, MCP tools/list) and surface spec-version drift per protocol. Routes each file via kg-protocol-detect's logic, then groups by (protocol, spec_version) so you can see at a glance whether your fleet is on a single version or mid-migration.",
+  "type": "module",
+  "license": "AGPL-3.0-or-later",
+  "author": "mizcausevic-dev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mizcausevic-dev/kg-suite-spec-version-tracker"
+  },
+  "keywords": [
+    "kinetic-gain-suite",
+    "protocol-detect",
+    "spec-version",
+    "drift",
+    "fleet",
+    "governance",
+    "ai-governance",
+    "typescript"
+  ],
+  "bin": {
+    "kg-suite-spec-version-tracker": "dist/cli.js"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "coverage": "vitest run --coverage",
+    "demo": "tsx src/cli.ts fixtures/mixed --format markdown",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.17.0",
+    "@types/node": "^22.10.0",
+    "@vitest/coverage-v8": "^2.1.8",
+    "eslint": "^9.17.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.18.0",
+    "vitest": "^2.1.8"
+  }
+}

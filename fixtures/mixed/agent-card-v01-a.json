@@ -1,0 +1,14 @@
+{
+  "agent_card_version": "0.1",
+  "agent": { "id": "x", "name": "X", "version": "1.0.0", "provider": "kg", "description": "x" },
+  "capabilities": {
+    "primary_purpose": "p",
+    "models_used": [{ "model": "claude" }],
+    "tools": [],
+    "max_context_tokens": 1000,
+    "memory_persistence": "none",
+    "autonomy_level": "assistive"
+  },
+  "deployment": {},
+  "safety_posture": {}
+}

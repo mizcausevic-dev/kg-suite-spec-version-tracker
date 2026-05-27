@@ -1,0 +1,6 @@
+{
+  "tools": [
+    { "name": "search-vectorstore", "description": "Search the docs" },
+    { "name": "summarize", "description": "Summarize a doc" }
+  ]
+}

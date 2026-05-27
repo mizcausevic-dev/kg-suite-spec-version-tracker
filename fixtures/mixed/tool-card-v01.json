@@ -1,0 +1,6 @@
+{
+  "tool_card_version": "0.1",
+  "tool": { "server_id": "kg-x", "name": "ping", "version": "1.0.0", "mcp_server_uri": "https://x/", "description": "ping" },
+  "schema": { "input_schema_inline": { "type": "object" } },
+  "safety": { "side_effect_class": "read", "pii_exposure": "none" }
+}
